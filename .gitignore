@@ -7,3 +7,4 @@ config/database.yml
 ThumbsDB
 #*#
 public/plugin_assets
+vendor/plugins/alreves
