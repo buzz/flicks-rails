@@ -1,0 +1,8 @@
+log/*
+tmp/**/*
+config/database.yml
+*.svn
+*~
+.DS_Store
+ThumbsDB
+#*#
