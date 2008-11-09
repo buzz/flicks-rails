@@ -1,16 +1,16 @@
-<div class="right default-padding">Flicks <span class="small">- personal movie database</span></div>
-<div class="left">
-	<ul id="top-menu">
+<div id="top">
+	<div class="right default-padding">Flicks <span class="small">- personal movie database</span></div>
+	<div id="top-menu" class="left">
 		{for item in ['Movies','Search','Settings','Help']}
-		<li class="left default-padding"><a href="#">${item}</a></li>
+		<a href="#" class="default-padding">${item}</a>
 		{/for}
-	</ul>
+	</div>
 </div>
 <div class="clear"></div>
-<div id="content" class="default-padding border">
+<div id="content" class="default-padding panel-color border">
 	content
 	contentcontentcontentcontentcontentcontentcontent
 </div>
-<div id="footer" class="default-padding border">
+<div id="footer" class="default-padding panel-color border">
 	footer
 </div>

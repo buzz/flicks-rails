@@ -7,30 +7,33 @@ html, body {
 
 /* Menu */
 
-ul#top-menu {
+#top-menu {
   padding: 0 0 0 1em;
   margin: 0;
-  list-style-image: none;
-  list-style-position: outside;
-  list-style-type: none;
 }
 
-ul#top-menu > li {
-  background: white;
-  display: block;
+#top-menu a {
   margin: 0 0.2em;
-  border-top: 0.1em solid gray;
-  border-left: 0.1em solid gray;
-  border-right: 0.1em solid gray;  
+  display: inline-table;
+  background-color: #e0e0e0;
+  border: 0.1em solid #888;
 }
 
-ul#top-menu > li.active {
-  background: white;
-  display: block;
-  margin: 0 0.2em;
-  border-top: 0.1em solid gray;
-  border-left: 0.1em solid gray;
-  border-right: 0.1em solid gray;  
+#top-menu a.active {
+  background: white !important;
+  border-top: 0.1em solid black !important;
+  border-right: 0.1em solid black !important;
+  border-bottom: none !important;
+  border-left: 0.1em solid black !important;
+}
+
+#top-menu a:hover {
+  background: #eee;
+  border-bottom: 0em none !important;
+}
+
+#content {
+  margin-top: -0.2em;
 }
 
 #footer {
@@ -43,8 +46,12 @@ ul#top-menu > li.active {
   padding: 0.5em;
 }
 
+.panel-color {
+  background: #fcfcfc;
+}
+
 .border { 
-  border: 1px solid gray;
+  border: 0.1em solid #888;
 }
 
 .left {

@@ -1,18 +1,24 @@
 /* Base */
 
 body {
+  color: #222;
+  background-color: #f3f3f3;
 	font-family: monospace;
   font-size: 100%;
 }
 
 /* Menu */
 
-ul#top-menu a, ul#top-menu a:visited, ul#top-menu a:active {
-  color: gray;
+#top-menu a, #top-menu a:visited, #top-menu a:active {
+  color: #555;
   text-decoration: none;
 }
 
-ul#top-menu a:hover {
+#top-menu a:hover {
+  color: black;
+}
+
+#top-menu a.active {
   color: black;
 }
 
