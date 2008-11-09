@@ -1,14 +1,11 @@
 require 'alreves_controller'
 
 class ApplicationController < AlrevesController
-  helper :all # include all helpers, all the time
+  helper :all
+  protect_from_forgery
 
-  # See ActionController::RequestForgeryProtection for details
-  # Uncomment the :secret if you're not using the cookie session store
-  protect_from_forgery # :secret => '34f1d3cee5a18229c5b5c774f6a7eab6'
-
-  # See ActionController::Base for details
-  # Uncomment this to filter the contents of submitted sensitive data parameters
-  # from your application log (in this case, all fields with names like "password").
-  # filter_parameter_logging :password
+  def alreves_init
+    super
+    @client_actions << "jQuery.alreves.injectCSS('stylesheets/layout.css')"
+  end
 end
