@@ -5,6 +5,32 @@ html, body {
   padding: 0.5em;
 }
 
+#content {
+  padding: 1.5em;
+  margin-top: -0.2em;
+}
+
+#footer {
+  margin-top: 0.5em;
+}
+
+/* Movie list */
+
+#movie_list {
+  width: 24%;
+}
+
+#movie_list input {
+  width: 99%;
+  padding: 0;
+  margin: 0.5em auto 0;
+  border: 1px solid #888;
+}
+
+#movies_filter {
+  text-align: center;
+}
+
 /* Menu */
 
 #top-menu {
@@ -32,14 +58,6 @@ html, body {
   border-bottom: 0em none !important;
 }
 
-#content {
-  margin-top: -0.2em;
-}
-
-#footer {
-  margin-top: 1em;
-}
-
 /* Classes */
 
 .default-padding {
@@ -52,6 +70,10 @@ html, body {
 
 .border { 
   border: 0.1em solid #888;
+}
+
+.vert-scroll {
+  overflow-y: scroll;
 }
 
 .left {
