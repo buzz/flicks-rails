@@ -1,0 +1,23 @@
+/* Base */
+
+body {
+	font-family: monospace;
+  font-size: 100%;
+}
+
+/* Menu */
+
+ul#top-menu a, ul#top-menu a:visited, ul#top-menu a:active {
+  color: gray;
+  text-decoration: none;
+}
+
+ul#top-menu a:hover {
+  color: black;
+}
+
+/* Classes */
+
+.small {
+  font-size: 90%;
+}
