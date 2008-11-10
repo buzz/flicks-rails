@@ -1,6 +1,6 @@
 <div class="bar">
 	<div class="right"></div>
-	Movie list
+	List
 </div>
 <table id="movies" cellpadding="0" cellspacing="0">
 	<thead>
