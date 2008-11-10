@@ -16,6 +16,11 @@ class MoviesController < ApplicationController
     @components.push(Component.new(:dest => '#content', :template_name => 'movies/search'))
   end
 
+  def show
+    @components.push Component.new(:dest => '#movie_details', :template_name => 'movies/details',
+                                    :data => {:movie => Movie.first(params[:id])})
+  end
+
   def new
     @components.push(Component.new(:dest => '#control', :template_name => "movies/new"))
   end

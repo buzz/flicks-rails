@@ -13,7 +13,9 @@
 		{for movie in movies}
 		<tr>
 			<td>${movie.id}</td>
-			<td><a href="#">${movie.title}</a><br/></td>
+			<td>
+				${%macros.link(movie.title, '#', {loadurl:'movies/'+movie.id})%}
+			</td>
 		</tr>
 		{/for}
 	</tbody>
@@ -27,4 +29,5 @@
 	  'sDom': '<"vert-scroll"t>f',
 		'oLanguage': {'sSearch': ''}
   });
+  $.alreves.loadURL('movies/${movie.id}');
 </script>
