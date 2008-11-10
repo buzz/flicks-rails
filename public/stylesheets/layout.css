@@ -18,22 +18,14 @@ html, body {
   margin-top: 0.5em;
 }
 
-/* Movie list */
+/* Forms */
 
-#movie_list {
-  background: #f8f8f8;
-  width: 24%;
-}
-
-#movie_list input {
+input {
   width: 100%;
   padding: 0;
   margin: 0.5em auto 0;
   border: 1px solid #888;
-}
-
-#movies_filter {
-  text-align: center;
+  background: #e0e0e0;
 }
 
 /* Tables */
@@ -71,6 +63,16 @@ tr.even {
   background: #f0f0f0;
 }
 
+/* Movie list */
+
+#movie_list {
+  background: #f8f8f8;
+  width: 24%;
+}
+
+#movies_filter {
+  text-align: center;
+}
 /* Menu */
 
 #top-menu {
