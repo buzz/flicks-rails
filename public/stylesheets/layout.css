@@ -1,5 +1,9 @@
 /* Page layout */
 
+* {
+  outline: none;
+}
+
 html, body {
   margin: 0;
   padding: 0.5em;
@@ -32,6 +36,41 @@ html, body {
   text-align: center;
 }
 
+/* Tables */
+
+table {
+  width: 100%;
+  padding: 0.5em;
+}
+
+table thead th {
+  padding: 0.3em 0.8em;
+  border-bottom: 0.1em solid #888;
+  font-weight: bold;
+  cursor: pointer;
+  cursor: hand;
+}
+
+th.sorting {
+  background: transparent url(../images/sortable.png) no-repeat scroll right center;
+}
+
+th.sorting_asc {
+  background: transparent url(../images/sortable_asc.png) no-repeat scroll right center;
+}
+
+th.sorting_desc {
+  background: transparent url(../images/sortable_desc.png) no-repeat scroll right center;
+}
+
+tr.odd {
+  background: #e0e0e0;
+}
+
+tr.even {
+  background: #f0f0f0;
+}
+
 /* Menu */
 
 #top-menu {
@@ -48,10 +87,10 @@ html, body {
 
 #top-menu a.active {
   background: white !important;
-  border-top: 0.1em solid black !important;
-  border-right: 0.1em solid black !important;
+  border-top: 0.3em solid #888 !important;
+  border-right: 0.1em solid #888 !important;
   border-bottom: 0.1em solid #fcfcfc !important;
-  border-left: 0.1em solid black !important;
+  border-left: 0.1em solid #888 !important;
 }
 
 #top-menu a:hover {
@@ -78,6 +117,10 @@ html, body {
 
 .border { 
   border: 0.1em solid #888;
+}
+
+.top-border { 
+  border-top: 0.3em solid #888;
 }
 
 .vert-scroll {

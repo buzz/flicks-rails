@@ -2,7 +2,7 @@
 	<div class="right"></div>
 	Movie list
 </div>
-<table id="movies">
+<table id="movies" cellpadding="0" cellspacing="0">
 	<thead>
 		<tr>
 			<th>ID</th>

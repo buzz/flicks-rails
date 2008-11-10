@@ -12,6 +12,10 @@ class MoviesController < ApplicationController
 
   end
 
+  def search
+    @components.push(Component.new(:dest => '#content', :template_name => 'movies/search'))
+  end
+
   def new
     @components.push(Component.new(:dest => '#control', :template_name => "movies/new"))
   end
