@@ -1,3 +1,4 @@
+<div class="bar">Movie list</div>
 <table id="movies">
 	<thead>
 		<tr>
