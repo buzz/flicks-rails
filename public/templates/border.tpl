@@ -1,8 +1,8 @@
 <div id="top">
 	<div class="right default-padding">Flicks <span class="small">- personal movie database</span></div>
 	<div id="top-menu" class="left">
-		{for item in ['Movies','Search','Settings','Help']}
-		<a href="#" class="default-padding">${item}</a>
+		{for item in menu}
+		<a href="#" class="default-padding">${item.name}</a>
 		{/for}
 	</div>
 </div>

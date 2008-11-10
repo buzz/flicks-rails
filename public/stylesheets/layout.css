@@ -50,13 +50,13 @@ html, body {
   background: white !important;
   border-top: 0.1em solid black !important;
   border-right: 0.1em solid black !important;
-  border-bottom: none !important;
+  border-bottom: 0.1em solid #fcfcfc !important;
   border-left: 0.1em solid black !important;
 }
 
 #top-menu a:hover {
   background: #eee;
-  border-bottom: 0em none !important;
+  border-bottom: 0.1em solid #fcfcfc !important;
 }
 
 /* Classes */
@@ -70,7 +70,6 @@ html, body {
 }
 
 .bar {
-  text-align: right;
   background: #f0f0f0;
   border: 1px solid #888;
   padding: 0.4em 0.6em;
