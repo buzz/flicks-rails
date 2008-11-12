@@ -8,9 +8,5 @@ class ApplicationController < AlrevesController
     super
     @components.first.data.merge! :menu => [{:name => 'Movies', :url => 'movies'},
                                             {:name => 'Search', :url => 'movies/search'}]
-    @client_actions << "jQuery.alreves.addMacroFile('macros.tpl')"
-    @client_actions << "jQuery.alreves.injectJS('javascripts/jquery.dataTables.js')"
-    @client_actions << "jQuery.alreves.injectCSS('stylesheets/layout.css')"
-    @client_actions << "jQuery.alreves.injectCSS('stylesheets/typo.css')"
   end
 end

@@ -6,17 +6,23 @@
 
 html, body {
   margin: 0;
-  padding: 0.5em;
+  padding: 0;
+}
+
+#wrapper {
+  padding: 1em;
+}
+
+#top > #border-bottom {
+  border-bottom: 4px solid #888;
 }
 
 #content {
   padding: 1.5em;
-  margin-top: -0.2em;
+  border-top: 0px none;
 }
 
 #footer {
-  margin-top: 0.5em;
-  border-width: 0.1em 0.1em 0.3em !important;
 }
 
 /* Forms */
@@ -38,7 +44,7 @@ table {
 
 table thead th {
   padding: 0.3em 0.8em;
-  border-bottom: 0.1em solid #888;
+  border-bottom: 1px solid #888;
   font-weight: bold;
   cursor: pointer;
   cursor: hand;
@@ -58,7 +64,7 @@ table thead th.sorting_desc {
 
 table tbody td {
   padding: 0.3em 0.8em;
-  border-bottom: 0.1em solid #bbb;
+  border-bottom: 1px solid #bbb;
 }
 
 tr.odd {
@@ -85,7 +91,7 @@ tr.even {
 }
 
 #movie_details .data_field {
-  border-top: 0.3em solid #e0e0e0;
+  border-top: 3px solid #e0e0e0;
   background: #f0f0f0;
   margin: 1em 0;
   padding: 0.5em 1em;
@@ -104,21 +110,21 @@ tr.even {
 
 #top-menu {
   padding: 0 0 0 1em;
-  margin: 0;
+  margin: 0 0 -5px;
 }
 
 #top-menu a {
   margin: 0 0.2em;
   display: inline-table;
   background: #f0f0f0 url(../images/bar_bg.png) repeat-x;
-  border: 0.1em solid #888;
+  border-width: 4px 1px 1px !important;
+  border-style: solid;
+  border-color: #888;
 }
 
 #top-menu a.active {
   font-weight: bold;
   background: white !important;
-  border-width: 0.3em 0.1em 0.1em !important;
-  border-style: solid;
   border-color: #888 #888 #fcfcfc #888 !important;
 }
 
@@ -148,11 +154,7 @@ tr.even {
 }
 
 .border { 
-  border: 0.1em solid #888;
-}
-
-.top-border { 
-  border-top: 4px solid #888;
+  border: 1px solid #888;
 }
 
 .vert-scroll {
