@@ -3,10 +3,10 @@
 	Details
 </div>
 <div class="data_field">
-	<span class="key">ID:</span>
 	<span class="value">${movie.id}</span>
+	<span class="key">ID:</span>
 </div>
 <div class="data_field">
-	<span class="key">Title:</span>
 	<span class="value">${movie.title}</span>
+	<span class="key">Title:</span>
 </div>

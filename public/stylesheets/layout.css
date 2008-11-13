@@ -99,22 +99,6 @@ tr.even {
 #movie_details {
 }
 
-#movie_details .data_field {
-  border-top: 3px solid #e0e0e0;
-  background: #f0f0f0;
-  margin: 1em 0;
-  padding: 0.5em 1em;
-}
-
-#movie_details .data_field .key {
-  float: left;
-  width: 10em;
-}
-
-#movie_details .data_field .value {
-  font-weight: bold;
-}
-
 /* Menu */
 
 #top-menu {
@@ -159,6 +143,22 @@ tr.even {
   border-color: #aaa #ccc #ccc;
   padding: 0.4em 0.6em;
   margin: 0 0 0.5em;
+  font-weight: bold;
+}
+
+.data_field {
+  border-top: 3px solid #e0e0e0;
+  background: #f0f0f0;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+}
+
+.data_field .key {
+  width: 10em;
+}
+
+.data_field .value {
+  float: right;
   font-weight: bold;
 }
 
