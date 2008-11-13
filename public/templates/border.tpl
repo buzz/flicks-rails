@@ -11,7 +11,9 @@
 		<div id="border-bottom"></div>
 	</div>
 	<div id="content" class="fbbl_center default-padding panel-color border"></div>
-	<div id="footer" class="fbbl_south default-padding panel-color border"></div>
+	<div class="fbbl_south">
+		<div id="footer" class="default-padding panel-color border"></div>
+	</div>
 </div>
 <script type="text/javascript">
 	$('#menu_item_0').addClass('active');
