@@ -5,8 +5,11 @@
 <div class="fbbl_center">
 	{for e in imdb_entries}
 	<div class="data_field">
-		<span class="value">${e.title} <span class="small gray">(${e.year})</span></span>
-		<span class="key">${e.id}</span>
+		<span class="value">
+			${e.title}
+			<span class="small gray">(${e.year})</span>
+		</span>
+		<span class="key">${e.id} <span class="small">${macros.link('Add title', '#')}|${macros.link('View IMDb page', 'http://www.imdb.com/title/tt'+e.id)}</span></span>
 	</div>
 	{/for}
 </div>
