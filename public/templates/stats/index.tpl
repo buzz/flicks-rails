@@ -19,9 +19,10 @@
 </div>
 <div class="data_field">
 	<span class="value">
-		${imdb_coverage} %
+		${%macros.googlechart('test', 't:'+imdb_coverage+','+(100-imdb_coverage), {chl:'have%7Cdo+not+have', chtt:'IMDb+coverage'})%}
 	</span>
 	<span class="key">
-		IMDb coverage:
+		IMDb coverage: ${imdb_coverage} %
 	</span>
+	<div class="clear"></div>
 </div>

@@ -158,6 +158,10 @@ tr.even {
   font-weight: bold;
 }
 
+.data_field img {
+  padding: 1em;
+}
+
 .border { 
   border: 1px solid #888;
 }
