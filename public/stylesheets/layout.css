@@ -23,11 +23,11 @@ html, body {
 }
 
 #content > .fbbl_west_collapser {
-  background-color: #e0e0e0;
+  background: #e0e0e0 url(../images/hide.png) no-repeat center;
 }
 
 #content > .fbbl_west_collapser:hover {
-  background-color: #888;
+  background: #888 url(../images/hide_hover.png) no-repeat center;
 }
 
 #footer {
@@ -38,11 +38,21 @@ html, body {
 /* Forms */
 
 input {
-  width: 100%;
-  padding: 0;
-  margin: 0.5em auto 0;
   border: 1px solid #888;
   background: #e0e0e0;
+}
+
+.data_field input {
+  width: 20em;
+}
+
+#movie_filter_form input {
+  width: 99%;
+}
+
+input[type=submit] {
+  padding: 0 1em;
+  width: auto;
 }
 
 /* Tables */
@@ -83,20 +93,6 @@ tr.odd {
 
 tr.even {
   background: #f0f0f0;
-}
-
-/* Movies */
-
-#movie_list {
-  float: left;
-  width: 25em;
-}
-
-#movies_filter {
-  text-align: center;
-}
-
-#movie_details {
 }
 
 /* Menu */

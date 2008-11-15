@@ -17,12 +17,14 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @components.push Component.new(:dest => '#movie_details', :template_name => 'movies/details',
+    @components.push Component.new(:dest => '#movie_main',
+                                   :template_name => 'movies/details',
                                    :data => {:movie => Movie.find(params[:id])})
   end
 
   def new
-    @components.push(Component.new(:dest => '#control', :template_name => "movies/new"))
+    @components.push(Component.new(:dest => '#movie_main',
+                                   :template_name => "movies/new"))
   end
 
   def edit
@@ -32,13 +34,10 @@ class MoviesController < ApplicationController
 
   def create
     @movie = Movie.new(params[:movie])
-    top_cat = Movie.first(:select => 'prio', :order => 'prio DESC')
-    @movie.prio = 0
-    @movie.prio = top_cat.prio + 1 if !top_cat.nil?
     if @movie.save
-      redirect_to :controller => 'movies', :action => 'index'
+      redirect_to :controller => 'movies', :action => 'show', :id => @movie.id
     else
-      redirect_to :action => 'new'
+      redirect_to :back
     end
   end
 

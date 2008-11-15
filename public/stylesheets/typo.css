@@ -27,3 +27,7 @@ body {
 .small {
   font-size: 90%;
 }
+
+.gray {
+  color: #555;
+}

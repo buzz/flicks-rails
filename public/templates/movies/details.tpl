@@ -1,5 +1,4 @@
 <div class="bar fbbl_north">
-	<div class="right"></div>
 	Details
 </div>
 <div class="fbbl_center">
@@ -13,7 +12,7 @@
 	</div>
 </div>
 <script type="text/javascript">
-  $('#movie_details').FBBorderLayout({
+  $('#movie_main').FBBorderLayout({
 	  spacing: 5,
 	  north_collapsable: false,
 	  south_collapsable: false

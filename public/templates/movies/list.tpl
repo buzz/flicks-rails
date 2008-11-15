@@ -22,15 +22,20 @@
 		</tbody>
 	</table>
 </div>
+<div class="right fbbl_south">
+	<form id="movie_filter_form" action="#">
+		<input name="movie_filter" type="textfield"/>
+	</form>
+</div>
 <script type="text/javascript">
-	$('#movies').dataTable({
+	(function(){
+	var table = $('#movies').dataTable({
 	  'bPaginate': false,
 	  'bProcessing': false,
 	  'bInfo': false,
 	  'bLengthChange': false,
 	  'bFilter': false,
-	  'sDom': 't',
-		'oLanguage': {'sSearch': ''}
+	  'sDom': 't'
   });
   $('#movie_list').FBBorderLayout({
 	  spacing: 5,
@@ -38,4 +43,8 @@
 	  south_collapsable: false
 	});
   $.alreves.loadURL('movies/${movie.id}');
+  $('#movie_filter_form :input').keyup(function () {
+		table.fnFilter(this.value);
+	} );
+  })()
 </script>
