@@ -7,6 +7,16 @@ body {
   font-size: 100%;
 }
 
+a, a:visited, a:active {
+  color: #555;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #222;
+  text-decoration: underline;
+}
+
 /* Menu */
 
 #top-menu a, #top-menu a:visited, #top-menu a:active {
