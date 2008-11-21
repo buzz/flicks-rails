@@ -4,6 +4,13 @@ class ImdbEntriesController < ApplicationController
                                    :template_name => 'imdb_entries/index'))
   end
 
+  def show
+    @components.push(Component.new(:dest => '#content',
+                                   :template_name => 'imdb_entries/show',
+                                   :data => {:imdb_entry => {:data => ImdbEntry.find(params[:id]),
+                                       :json_opts => {:include => [:movie_titles]}}}))
+  end
+
   def find_remote
     imdb_entries = {}
     if !params[:imdb_number].nil?

@@ -9,7 +9,7 @@
 			${e.title}
 			<span class="small gray">(${e.year})</span>
 		</span>
-		<span class="key">${e.id} <span class="small">${macros.link('Add title', '#')}|${macros.link('View IMDb page', 'http://www.imdb.com/title/tt'+e.id)}</span></span>
+		<span class="key">${e.id} <span class="small">${%macros.link('Add title', '#', {loadurl:'movies/create', loadoptions:'{post_data:{imdb_number:'+e.id+'}}'})%}| ${%macros.link('View IMDb page', 'http://www.imdb.com/title/tt'+e.id), {target:'_blank'}%}</span></span>
 	</div>
 	{/for}
 </div>

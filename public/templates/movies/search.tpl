@@ -26,19 +26,23 @@
 		<div class="clear"></div>
 	</div>
 </div>
-<div id="movie_results" class="fbbl_center">
+<div id="movie_results" class="fbbl_center" style="display:none;">
+	${%macros.loading({size:'big'})%}
 </div>
 <script type="text/javascript">
+	(function(){
   $('#content').FBBorderLayout({
 	  spacing: 20,
 	  north_collapsable: false
 	});
+  var loading = $('#movie_results').html();
 	$('#movie_by_id :submit').click(function(e){
 	  e.preventDefault();
 	  $.alreves.submitForm($('#movie_by_id'),
       {success:function(){$('#content :input').enable();}})
 	    .find(':input');
     $('#content :input').disable();
+	  $('#movie_results').html(loading).show();
 	});
 	$('#movie_by_title :submit').click(function(e){
 	  e.preventDefault();
@@ -46,5 +50,7 @@
       {success:function(){$('#content :input').enable();}})
 	    .find(':input');
       $('#content :input').disable();
+	    $('#movie_results').html(loading).show();
 	});
+  })()
 </script>

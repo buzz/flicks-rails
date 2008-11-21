@@ -6,6 +6,10 @@ class ImdbEntry < ActiveRecord::Base
   has_many :imdb_language_assignments, :dependent => :destroy
   has_one :movie, :dependent => :destroy
 
+  def title
+    movie_titles.first
+  end
+
   USER_AGENT = 'Mozilla/5.001 (windows; U; NT4.0; en-us) Gecko/25250101'
   IMDB_URL = 'http://www.imdb.com/'
   IMDB_AKAS_URL = 'http://akas.imdb.com/'

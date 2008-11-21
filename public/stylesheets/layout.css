@@ -170,6 +170,17 @@ tr.even {
   overflow-y: scroll;
 }
 
+.loading {
+  padding: 5em;
+  text-align: center;
+}
+
+.loading > img {
+  padding: 1em;
+}
+
+/* General classes */
+
 .left {
   float: left;
 }

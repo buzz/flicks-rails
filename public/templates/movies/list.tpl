@@ -42,7 +42,9 @@
 	  north_collapsable: false,
 	  south_collapsable: false
 	});
-  $.alreves.loadURL('movies/${movie.id}');
+  {if movies.length > 0}
+    $.alreves.loadURL('movies/${movies[0].id}');
+  {/if}
   $('#movie_filter_form :input').keyup(function () {
 		table.fnFilter(this.value);
 	} );
