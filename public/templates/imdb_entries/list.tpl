@@ -6,14 +6,14 @@
 	<table id="movies" cellpadding="0" cellspacing="0">
 		<thead>
 			<tr>
-				<th>ID</th>
+				<th>#</th>
 				<th>Title</th>
 			</tr>
 		</thead>
 		<tbody>
 			{for movie in movies}
 			<tr>
-				<td>${movie.id}</td>
+				<td>${movie.disk_id}</td>
 				<td>
 					${%macros.link(movie.title, '#', {loadurl:'movies/'+movie.id})%}
 				</td>

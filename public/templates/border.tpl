@@ -10,7 +10,9 @@
 		</div>
 		<div id="border-bottom"></div>
 	</div>
-	<div id="content" class="fbbl_center default-padding panel-color border"></div>
+	<div id="content" class="fbbl_center default-padding panel-color border">
+		${%macros.loading({size:'big'})%}
+	</div>
 	<div class="fbbl_south">
 		<div id="footer" class="default-padding panel-color border"></div>
 	</div>

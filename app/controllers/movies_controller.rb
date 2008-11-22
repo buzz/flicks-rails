@@ -1,15 +1,8 @@
 class MoviesController < ApplicationController
   def index
-    @components.push(Component.new(:dest => '#content', :template_name => 'movies/index'))
-  end
-
-  def list
-    @components.push Component.new(:dest => '#movie_list', :template_name => 'movies/list',
-                                   :data => {
-                                     :movies => {
-                                       :data => Movie.find(:all, :order => 'id DESC'),
-                                       :json_opts => {:only => [:id, :title]}}})
-
+    @components.push(Component.new(:dest => '#content', :template_name => 'movies/index',
+                                   :data => {:movies => {:data => Movie.find(:all),
+                                       :json_opts => {:include => [:imdb_entry]}}}))
   end
 
   def search

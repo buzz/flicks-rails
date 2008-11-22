@@ -4,6 +4,12 @@ class ImdbEntriesController < ApplicationController
                                    :template_name => 'imdb_entries/index'))
   end
 
+  def list
+    @components.push(Component.new(:dest => '#movie_list', :template_name => 'imdb_entries/list',
+                                   :data => {:movies => {:data => Movie.find(:all),
+                                       :json_opts => {:include => [:imdb_entry]}}}))
+  end
+
   def show
     @components.push(Component.new(:dest => '#content',
                                    :template_name => 'imdb_entries/show',
