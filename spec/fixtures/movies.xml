@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AntMovieCatalog Format="35" Version="3.5.1 (2007-09-22)" Date="6/22/2008 5:10:11 PM">
+ <Catalog>
+  <Properties/>
+  <Contents>
+   <Movie Number="1" Checked="True" Source="ViTE" OriginalTitle="Donnie Darko" FormattedTitle="Donnie Darko" Director="Richard Kelly (II)" Country="USA" Category="Fantasy" Year="2001" Length="112" Actors="Jake Gyllenhaal (as Donnie Darko), Jena Malone (as Gretchen Ross), Mary McDonnell (as Mrs. Rose Darko), Drew Barrymore (as Karen Pomeroy), Patrick Swayze (as Jim Cunningham), Holmes Osborne (as Mr. Edward Darko), Katharine Ross (as Dr. Lilian Thurman), Noah Wyle (as Prof. Kenneth Monnitoff), Beth Grant (as Ms. Kitty Farmer), Maggie Gyllenhaal (as Elizabeth Darko), Daveigh Chase (as Samantha Darko), James Duval (as Frank/&#39;The Rabbit&#39;), Stuart Stone (as Ronald Fisher), Gary Lundy (as Sean Smith), Alex Greenwald (as Seth Devlin)" URL="http://us.imdb.com/Title?0246578" Description="Donnie Darko is a disturbed adolescent from a semi-functional upper-middle class family. After escaping from near death because he hears the voice of a 6 foot tall bunny, Donnie is led by the bunny to create havoc that is both destructive and creative. " VideoFormat="DivX" AudioFormat="MPEG Layer 3 (MP3)" Languages="English/German" Disks="2" Picture="images\Donnie Darko (front).jpg"/>
+   <Movie Number="2" Checked="True" Date="2/18/2008" OriginalTitle="Pirates of Silicon Valley" FormattedTitle="Pirates of Silicon Valley" URL="0168122" Languages="English" Subtitles="English"/>
+   <Movie Number="3" Checked="True" Date="2/18/2008" OriginalTitle="THX 1138" FormattedTitle="THX 1138" URL="0066434" Languages="English" Subtitles="English/German"/>
+  </Contents>
+ </Catalog>
+</AntMovieCatalog>
