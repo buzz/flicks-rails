@@ -54,6 +54,6 @@ class ImdbEntry < ActiveRecord::Base
 
   # returns % of movies that have an imdb entry associated
   def self.coverage
-    ImdbEntry.count(:all)/Movie.count(:all)
+    ImdbEntry.count(:all).to_f/Movie.count(:all).to_f
   end
 end
