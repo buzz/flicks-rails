@@ -28,11 +28,19 @@ describe ImdbEntry do
     entry.save!
     movie = Movie.new :imdb_entry => entry
     movie.save!
-    ImdbEntry.coverage.should be_close(0.33333, 0.00001)
+    ImdbEntry.coverage.should be_close(ImdbEntry.count(:all).to_f / Movie.count(:all).to_f, 0.00001)
+  end
+end
+
+describe ImdbEntry, '.imdb_sync' do
+  before(:all) do
+    @entry = ImdbEntry.create!({:imdb_number => 87843})
+    @entry.imdb_sync
   end
 
   it "should synchronize the titles"
-  
-  it "should synchronize with a remote entry"
-  
+
+  it "should synchronize the languages"
+
+  it "should synchronize the genres"
 end

@@ -56,4 +56,9 @@ class ImdbEntry < ActiveRecord::Base
   def self.coverage
     ImdbEntry.count(:all).to_f/Movie.count(:all).to_f
   end
+
+  # synchronize with imdb
+  def imdb_sync
+    # TODO fill stub
+  end
 end
