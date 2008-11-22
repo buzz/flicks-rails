@@ -6,7 +6,6 @@ class CreateImdbEntries < ActiveRecord::Migration
       t.string :writer
       t.string :country
       t.integer :year
-      t.string :genre
       t.string :plot
       t.integer :runtime
       t.float :rating
