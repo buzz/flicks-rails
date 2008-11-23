@@ -51,21 +51,25 @@ class Movie < ActiveRecord::Base
     doc = Document.new xml
     doc.elements.collect('AntMovieCatalog/Catalog/Contents/Movie') do |m|
       movie = Movie.new
+      # imdb #
+      if m.attribute('URL').to_s =~ /([0-9]+)/
+        if !ImdbEntry.find_by_imdb_number($1).nil?
+          next
+        end
+        movie.imdb_entry = ImdbEntry.new(:imdb_number => $1)
+      end
       # disk id
       if !m.attribute('Number').nil?
         movie.disk_id = m.attribute('Number').to_s.to_i
       end
       # title
       if !m.attribute('OriginalTitle').nil?
+        puts "#{m.attribute('OriginalTitle').to_s}"
         movie.title = m.attribute('OriginalTitle').to_s
       end
       # no. disks
       if !m.attribute('Disks').nil?
         movie.disks = m.attribute('Disks').to_s.to_i
-      end
-      # imdb #
-      if m.attribute('URL').to_s =~ /([0-9]+)/
-        movie.imdb_entry = ImdbEntry.new(:imdb_number => $1)
       end
       # video format
       if !m.attribute('VideoFormat').nil?
@@ -107,6 +111,7 @@ class Movie < ActiveRecord::Base
       if !m.attribute('Source').nil?
         movie.releaser = m.attribute('Source').to_s
       end
+      puts "ADDED"
       movie
     end
   end
