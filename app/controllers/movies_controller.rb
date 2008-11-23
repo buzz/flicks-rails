@@ -12,7 +12,8 @@ class MoviesController < ApplicationController
   def show
     @components.push Component.new(:dest => '#movie_main',
                                    :template_name => 'movies/details',
-                                   :data => {:movie => Movie.find(params[:id])})
+                                   :data => {:movie => {:data => Movie.find(params[:id]),
+                                     :json_opts => {:include => :imdb_entry}}})
   end
 
   def new
