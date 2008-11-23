@@ -1,7 +1,7 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+english:
+  id: 1
+  name: english
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+german:
+  id: 2
+  name: german

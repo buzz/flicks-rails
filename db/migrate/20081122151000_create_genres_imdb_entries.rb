@@ -7,6 +7,6 @@ class CreateGenresImdbEntries < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :imdb_entries
+    drop_table :genres_imdb_entries
   end
 end

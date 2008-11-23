@@ -1,14 +1,48 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe Movie do
+  fixtures :languages
+  
   before(:each) do
     @movie = Movie.new
+    @lang = {
+      :german => Language.find_by_name('german'),
+      :english => Language.find_by_name('english')
+    }
+  end
+  
+  it "should assign an audio language by string" do
+    @movie.assign_audio_language('swahili')
+    @movie.audio_languages.should include(Language.find_by_name('swahili'))
+  end
+
+  it "should assign an audio language" do
+    @movie.assign_audio_language(@lang[:german])
+    @movie.audio_languages.should include(@lang[:german])
+  end
+
+  it "should assign a subtitles language by string" do
+    @movie.assign_subtitles_language('swahili')
+    @movie.subtitles_languages.should include(Language.find_by_name('swahili'))
+  end
+
+  it "should assign a subtitles language" do
+    @movie.assign_subtitles_language(@lang[:german])
+    @movie.subtitles_languages.should include(@lang[:german])
+  end
+  
+  after(:each) do
+    @movie.destroy
   end
 end
 
 describe Movie, '.import_from_amc_xml' do
   before(:each) do
     @movies = Movie.import_from_amc_xml(File.open(File.join(File.dirname(__FILE__), '..', 'fixtures', 'movies.xml')).read)
+    @lang = {
+      :german => Language.find_by_name('german'),
+      :english => Language.find_by_name('english')
+    }
   end
 
   it "should import title" do
@@ -35,9 +69,19 @@ describe Movie, '.import_from_amc_xml' do
     @movies[2].audio_format.should be(nil)
   end
   
-  it "should import movie languages"
-    
-  it "should import subtitle languages"
+  it "should import movie languages" do
+    @movies.first.audio_languages.should include(@lang[:german])
+    @movies.first.audio_languages.should include(@lang[:english])
+    @movies[1].audio_languages.should include(@lang[:english])
+    @movies[2].audio_languages.should include(@lang[:english])
+  end
+
+  it "should import subtitle languages" do
+    @movies.first.subtitles_languages.should be_empty
+    @movies[1].subtitles_languages.should include(@lang[:english])
+    @movies[2].subtitles_languages.should include(@lang[:english])
+    @movies[2].subtitles_languages.should include(@lang[:german])
+  end
 
   it "should import disk id" do
     @movies.first.disk_id.should be(1)
@@ -55,5 +99,11 @@ describe Movie, '.import_from_amc_xml' do
     @movies.first.releaser.should == 'ViTE'
     @movies[1].releaser.should be(nil)
     @movies[2].releaser.should be(nil)
+  end
+  
+  after(:each) do
+    @movies.each do |m|
+      m.destroy
+    end
   end
 end

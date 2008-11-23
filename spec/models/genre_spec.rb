@@ -11,4 +11,8 @@ describe Genre do
     Genre.create!(@valid_attributes)
   end
   
+  it do
+    Genre.create.should have(1).error_on(:name)
+  end
+
 end
